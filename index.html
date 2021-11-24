@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css">
+  <script src="https://api.mapy.cz/loader.js"></script>
+  <script src="java.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+
+    <div class="navbar">
+      <a class="active" href="https://www.youtube.com/watch?v=McuWe1KWsOk"><i class="fa fa-fw fa-home"></i> The Best link of them all</a>
+      <a class="notactive" href="https://open.spotify.com/album/6JsK4TJnhrUgQzew3Fp8Ch"><i class="fa fa-fw fa-search"></i> China Link 1</a>
+      <a class="notactive" href="https://open.spotify.com/album/6JsK4TJnhrUgQzew3Fp8Ch"><i class="fa fa-fw fa-envelope"></i> China link 2</a>
+      <a class="notactive" href="https://open.spotify.com/album/6JsK4TJnhrUgQzew3Fp8Ch"><i class="fa fa-fw fa-user"></i> China link 3</a>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:15%;">
+      <h3 class="w3-bar-item">Menu</h3>
+      <a href="https://www.youtube.com/watch?v=XZ5Uv4JKTU4" style="transition: 0.3s;" class="w3-bar-item w3-button">Monkey link 1</a>
+      <a href="https://www.youtube.com/watch?v=XZ5Uv4JKTU4" style="transition: 0.3s;" class="w3-bar-item w3-button">Monkey link 2</a>
+      <a href="https://www.youtube.com/watch?v=XZ5Uv4JKTU4" style="transition: 0.3s;" class="w3-bar-item w3-button">Monkey link 3</a>
+    </div>
+
+    <!-- Page Content -->
+    <div style="margin-left:16%">
+
+      <body>
+        <h2 style="text-align:center">Vítejte</h2>
+        <p style="text-align:center">Na mé absolutně perfektní stránce plné úžasů. tato stránka ukazuje moje
+          bezprecedentní webařské dovednosti (Tuto větu berte s nadsázkou).</p>
+
+        <h2 style="text-align:center">Lightbox</h2>
+
+        <div class="row">
+          <div class="column">
+            <img src="img_nature.jpg" style="width:100%" onclick="openModal();currentSlide(1)"
+              class="hover-shadow cursor">
+          </div>
+          <div class="column">
+            <img src="img_snow.jpg" style="width:100%" onclick="openModal();currentSlide(2)"
+              class="hover-shadow cursor">
+          </div>
+          <div class="column">
+            <img src="img_mountains.jpg" style="width:100%" onclick="openModal();currentSlide(3)"
+              class="hover-shadow cursor">
+          </div>
+          <div class="column">
+            <img src="img_lights.jpg" style="width:100%" onclick="openModal();currentSlide(4)"
+              class="hover-shadow cursor">
+          </div>
+        </div>
+
+        <div id="myModal" class="modal">
+          <span class="close cursor" onclick="closeModal()">&times;</span>
+          <div class="modal-content">
+
+            <div class="mySlides">
+              <div class="numbertext">1 / 4</div>
+              <img src="img_nature_wide.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">2 / 4</div>
+              <img src="img_snow_wide.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">3 / 4</div>
+              <img src="img_mountains_wide.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img src="img_lights_wide.jpg" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+
+
+            <div class="column">
+              <img class="demo cursor" src="img_nature_wide.jpg" style="width:100%" onclick="currentSlide(1)"
+                alt="Nature and sunrise">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="img_snow_wide.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="img_mountains_wide.jpg" style="width:100%" onclick="currentSlide(3)"
+                alt="Mountains and fjords">
+            </div>
+            <div class="column">
+              <img class="demo cursor" src="img_lights_wide.jpg" style="width:100%" onclick="currentSlide(4)"
+                alt="Northern Lights">
+            </div>
+          </div>
+        </div>
+        <h2 style="text-align:center">Mapa</h2>
+        <div class="MapContainer">
+          <script>Loader.load()</script>
+          <div id="mapa" style="width:600px; height:400px;"></div>
+          <script src="javadva.js" type="text/javascript"></script>
+        </div>
+        <h2 style="text-align:center">Graf</h2>
+        <p style="text-align:center">Tento graf nám ukazuje kolik čínských hrdinů se nechalo popravit velice dobrovolně na ukázku své důvěry a cti pro našeho vůdce Bing Chilling.</p>
+        <div class="GraphContainer">
+          <canvas id="myChart" style="width:100%;max-width:700px;padding-top: 20px;"></canvas>
+          <script src="javatri.js"></script>
+        </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
